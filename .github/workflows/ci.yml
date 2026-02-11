@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI
 
 on:
   push:
@@ -16,11 +16,11 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: 
-          python-version: "3.11"
+        with:
+          python-version: '3.11'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Tests
+      - name: Run tests
         run: pytest -v
